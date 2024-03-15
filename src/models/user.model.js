@@ -23,7 +23,7 @@ const UserSchema = new mongoose.Schema({
         type : String,
         required : true,
         trim : true,
-        enum : ["Admin", "Student"]
+        enum : ["Admin", "Regular User"]
     }
 })
 
