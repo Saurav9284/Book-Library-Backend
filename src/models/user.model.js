@@ -24,7 +24,11 @@ const UserSchema = new mongoose.Schema({
         required : true,
         trim : true,
         enum : ["Admin", "Regular User"]
-    }
+    },
+    "books" : [{
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "Books"
+    }]
 })
 
 UserSchema.pre("save", async function(next){
