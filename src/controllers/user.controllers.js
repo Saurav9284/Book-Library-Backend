@@ -126,7 +126,7 @@ const getUserProfile = async (id) => {
     throw new Error("id not found");
   }
   try {
-    const user = await UserModel.findById(id).populate("books");
+    const user = await UserModel.findById(id).populate("book");
     if (!user) {
       throw new Error("User not found");
     }
@@ -138,7 +138,7 @@ const getUserProfile = async (id) => {
 
 const getAllUser = async () => {
   try {
-    const users = await UserModel.find().populate("books");
+    const users = await UserModel.find().populate("book");
     if (!users) {
       throw new Error("Unable to access users right now");
     }
