@@ -23,7 +23,8 @@ const UserSchema = new mongoose.Schema({
         type : String,
         required : true,
         trim : true,
-        enum : ["Admin", "Regular User"]
+        enum : ["Admin", "Regular User"],
+        // default : "Regular User"
     },
     "books" : [{
         type : mongoose.Schema.Types.ObjectId,

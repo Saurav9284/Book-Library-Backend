@@ -159,7 +159,7 @@ const Borrowbook = async (data) => {
     if (user.books.length >= 1) {
         throw new Error("User cannot borrow more than 1 book");
       }
-    if (user.books.includes(courseId)) {
+    if (user.books.includes(bookId)) {
       throw new Error("User is already borrow this book");
     }
     user.books.push(bookId);
