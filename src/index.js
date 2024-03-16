@@ -3,7 +3,7 @@ const { app } = require("./app");
 const { Connection } = require("./db/db");
 const  { ApolloServer } = require("apollo-server-express");
 const { applyMiddleware } = require("@apollo/server/express4");
-const { typeDefs, resolvers } = require("./graphql/index");
+const { typeDefs, resolvers } = require("./graphql/main");
 const { authentication } = require("./middleware/authentication.middleware");
 
 const PORT = process.env.PORT;
