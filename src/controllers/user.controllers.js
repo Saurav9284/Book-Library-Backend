@@ -66,7 +66,7 @@ const LoginUser = async (LoginData) => {
       secure: true,
     };
     loggedInUser.accessToken = accessToken;
-    return loggedInUser;
+    return loggedInUser
   } catch (error) {
     throw error;
   }

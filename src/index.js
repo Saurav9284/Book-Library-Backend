@@ -2,7 +2,7 @@ require('dotenv').config()
 const { app } = require("./app");
 const { Connection } = require("./db/db");
 const  { ApolloServer } = require("apollo-server-express");
-const { expressMiddleware } = require("@apollo/server/express4");
+const { applyMiddleware } = require("@apollo/server/express4");
 const { typeDefs, resolvers } = require("./graphql/index");
 const { authentication } = require("./middleware/authentication.middleware");
 
@@ -18,11 +18,12 @@ const server = new ApolloServer({
 });
 
 Connection()
+
   .then(async () => {
     await server.start();
     server.applyMiddleware({ app });
     app.listen(PORT, () => {
-      console.log(`Server is live on port no. ${PORT}`);
+      console.log(`server is running on PORT:${PORT}`);
     });
   })
   .catch((error) => {

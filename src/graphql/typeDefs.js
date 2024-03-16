@@ -13,6 +13,7 @@ type Book {
     id: ID!
     title: String!
     author: String!
+    genre: String!
     price: Float! 
 }
 
@@ -31,7 +32,7 @@ type Mutation {
     deleteUser(id: ID!): User
     Borrowbook(userId: ID!, courseId: ID!): User
 
-    createBook(title: String!, author: String!, genre: String!, price: Float!): Book # Changed to Float or Int
+    createBook(title: String!, author: String!, genre: String!, price: Float!): Book 
     updateBook(id: ID!, name: String, description: String, prerequisites: String): Book
     deleteBook(id: ID!): Book
 }`;

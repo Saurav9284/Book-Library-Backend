@@ -15,9 +15,9 @@ const resolvers = {
         loginUser: async (_, {email, password})=> {return await LoginUser({email,password})},
         passwordChange: async (_, {id, oldPassword, newPassword}) => {return await passwordChange({id, oldPassword, newPassword})},
         deleteUser: async (_, {id}) => {return await DeleteUser(id)},
-        Borrowbook: async (_, {userId, courseId}, context) => {
+        Borrowbook: async (_, {userId, bookId}, context) => {
           if(context.user){
-            return await Borrowbook({userId, courseId})
+            return await Borrowbook({userId, bookId})
           }
         },
       

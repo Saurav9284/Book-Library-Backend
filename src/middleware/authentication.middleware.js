@@ -4,12 +4,13 @@ const { compare } = require("bcrypt");
 require('dotenv').config()
 
 const authentication = async (req, res) => { 
-    const token = req.headers?.authorization?.split(" ")[1] || " ";
+    const token = req.headers?.authorization?.split("Bearer ")[1];
     console.log(token)
     try {
         if (!token) { 
             throw new Error("No token found")
         }
+
         const decoded = await jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
         const user = await UserModel.findById(decoded._id).select("-password");
         console.log(user)
