@@ -30,10 +30,10 @@ type Mutation {
     loginUser(email: String!, password: String!): User
     passwordChange(id: ID!, oldPassword: String, newPassword: String): User
     deleteUser(id: ID!): User
-    Borrowbook(userId: ID!, courseId: ID!): User
+    Borrowbook(userId: ID!, bookId : ID!): User
 
     createBook(title: String!, author: String!, genre: String!, price: Float!): Book 
-    updateBook(id: ID!, name: String, description: String, prerequisites: String): Book
+    updateBook(id: ID!, title: String!, author: String!, genre: String!, price: Float!): Book
     deleteBook(id: ID!): Book
 }`;
 

@@ -28,7 +28,7 @@ const resolvers = {
         }, 
         updateBook: async (_, {id, title, author, genre , price}, context) => {
           if(!authorization(context, "Admin")){
-            return await updateBook({id,title, author, genre , price})
+            return await updateBook({id, title, author, genre , price})
           }
         }, 
         deleteBook: async (_, {id}, context) => {
