@@ -1,6 +1,6 @@
 ## Book-Library-Backend
 
-### Deployment : <a href="https://book-library-backend-saurav.vercel.app/graphql">Link</a>
+### Deployment : <a href="https://book-library-backend-saurav.vercel.app/">Link</a>
 
 ### Backend
 - Node.js
