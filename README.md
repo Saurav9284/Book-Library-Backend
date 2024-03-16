@@ -12,6 +12,35 @@
 
 - ### [Watch Demo Video](https://drive.google.com/file/d/1wMqwnwDPZyXRexX0vvQ_g8Gr5bJ8g8ni/view?usp=sharing)
 
+## Admin and Student Credentials
+
+### Admin
+
+- Email: [admin@gmail.com]
+- Password: [Admin@123]
+
+### User
+
+- Email: [saurav178chavan@gmail.com]
+- Password: [123]
+
+## Installation and Setup
+
+### Frontend
+
+1. Clone the repository.
+2. Navigate to the frontend directory.
+3. Run `npm install` to install dependencies.
+4. Run `npm run start` to start the development server.
+
+### Backend
+
+1. Clone the repository.
+2. Navigate to the backend directory.
+3. Run `npm install` to install dependencies.
+4. Rename `sample.env.txt` to `.env` and fill in the necessary environment variables.
+5. Run `npm run start` to start the development server.
+
 ## API Endpoints
 
 API's are built with graphQL
